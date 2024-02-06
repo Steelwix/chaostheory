@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+    <h1>BO</h1>
+            <div id="the_frame_id">
+                <form action="{{ path('test_ajax') }}" method="post">
+                    <!-- Text Input -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <br>
+
+                    <!-- Email Input -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <br>
+
+                    <!-- Password Input -->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <br>
+
+                    <!-- Radio Buttons -->
+                    <p>Gender:</p>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                    <br>
+
+                    <!-- Checkbox -->
+                    <input type="checkbox" id="subscribe" name="subscribe" value="true">
+                    <label for="subscribe">Subscribe to our newsletter</label>
+                    <br>
+
+                    <!-- Select Dropdown -->
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select your country</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                        <option value="australia">Australia</option>
+                        <option value="germany">Germany</option>
+                    </select>
+                    <br>
+
+                    <!-- Textarea -->
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="30" placeholder="Enter your message"></textarea>
+                    <br>
+
+                    <!-- Submit Button -->
+                    <input class="btn btn-success" type="submit" value="Submit">
+                </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
